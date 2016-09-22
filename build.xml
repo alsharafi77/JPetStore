@@ -9,8 +9,8 @@
   <property name="tests.data.dir" location="${build.dir}/test-data" />
   <property name="dist.tests.dir" location="test-data" />
   <property name="tests.reports.dir" location="test-reports" />
-	
-	
+
+
   <property name="dist.dir" location="dist"/>
   <property name="build.dir" location="build"/>
   <property name="debug" value="on"/>
@@ -23,7 +23,7 @@
 	   <path refid="classpath"/>
 	   <pathelement location="${src.domain.dir}"/>
 	   <pathelement location="${tests.classes.dir}"/>
-  </path>  
+  </path>
 	<path id="project.class.path">
 	    <fileset dir="${lib.dir}" includes="**/*.jar" />
 	    <pathelement path="${build.dir}/classes"/>
@@ -62,6 +62,7 @@
         <include name="**/*.properties"/>
         <include name="**/*.tld"/>
         <include name="**/*.xml"/>
+        <include name="**/*.gif"
       </fileset>
     </copy>
   	<mkdir dir="${build.dir}/war/WEB-INF/lib"/>
@@ -77,7 +78,7 @@
       </fileset>
     </jar>
   </target>
-	
+
   <target name="dist" depends="war">
   	<copy todir="${dist.dir}">
 	    <fileset dir="${src.domain.dir}">
@@ -94,16 +95,16 @@
 	      <include name="jpetstore.xml"/>
 	    </fileset>
   	</copy>
-  		
+
   </target>
-  	
+
   <target name="compile-tests" depends="compile">
 	   <mkdir dir="${build.dir}"/>
 	   <mkdir dir="${tests.classes.dir}"/>
-	    	
-	 
+
+
 	   <javac destdir="${tests.classes.dir}"
-	          debug="${compiler.debug}" 
+	          debug="${compiler.debug}"
 	          deprecation="${compiler.deprecation}"
 	          classpathref="project.class.path">
 	       	  <src path="${src.tests.dir}" />
@@ -114,8 +115,8 @@
 	            <exclude name="**/*.java"/>
 	        </fileset>
 	   </copy>
-  </target>	
-	
+  </target>
+
 	<target name="test" depends="compile-tests">
         <mkdir dir="work"/>
         <mkdir dir="${tests.data.dir}/junit"/>
@@ -140,7 +141,7 @@
 		</junitreport>
 
 	</target>
-	
+
   <target name="all" depends="dist, test" />
 
 </project>
