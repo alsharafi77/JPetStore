@@ -62,7 +62,7 @@
         <include name="**/*.properties"/>
         <include name="**/*.tld"/>
         <include name="**/*.xml"/>
-        <include name="**/*.gif"
+        <include name="**/*.gif"/>
       </fileset>
     </copy>
   	<mkdir dir="${build.dir}/war/WEB-INF/lib"/>
