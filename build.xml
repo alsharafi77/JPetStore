@@ -9,10 +9,7 @@
   <property name="tests.data.dir" location="${build.dir}/test-data" />
   <property name="dist.tests.dir" location="test-data" />
   <property name="tests.reports.dir" location="test-reports" />
-
-
   <property name="dist.dir" location="dist"/>
-  <property name="build.dir" location="build"/>
   <property name="debug" value="on"/>
 
   <path id="classpath">
@@ -139,7 +136,6 @@
 		  	</fileset>
 		  	<report format="frames" todir="${tests.reports.dir}/junit"/>
 		</junitreport>
-
 	</target>
 
   <target name="all" depends="dist, test" />
