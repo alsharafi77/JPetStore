@@ -12,7 +12,7 @@
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 </head>
 
-<body bgcolor="BLACK">
+<body bgcolor="BLUE">
 
 <table background="../images/bkg-topbar.gif" border="0" cellspacing="0" cellpadding="5" width="100%">
   <tbody>
